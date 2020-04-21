@@ -49,7 +49,7 @@ end
 
 -- Creating Transition Function to Instructions Page
 local function InstructionsTransition( )       
-    composer.gotoScene( "Instructions_screen", {effect = "flipFadeOutIn", time = 500})
+    composer.gotoScene( "instructions", {effect = "flipFadeOutIn", time = 500})
 end 
 
 -----------------------------------------------------------------------------------------
@@ -128,7 +128,7 @@ function scene:create( event )
     -----------------------------------------------------------------------------------------
 
     -- Creating Instructions Button
-    InstructionsButton = widget.newButton( 
+    instructionsButton = widget.newButton( 
         {
             -- Set its position on the screen relative to the screen size
             x = display.contentWidth*1/8,
@@ -154,10 +154,11 @@ function scene:create( event )
     -----------------------------------------------------------------------------------------
 
     -- Associating button widgets with this scene
+    --[[
     sceneGroup:insert( playButton )
     sceneGroup:insert( creditsButton )
     sceneGroup:insert( instructionsButton )
-
+    ]]
 end -- function scene:create( event )   
 
 
